@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- OneSignal SDK Script -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "BFX60-6BG7NRB2-3vR8LqrWcs3PO4S5ZBbuXb1000nyPow6CqiH6GgPwZqfuenlPHBFcH6yaeuMAekC62KKfXrE",  // Reemplaza con tu ID de OneSignal
+        safari_web_id: "TU-SAFARI-ID-SI-APLICA", // Opcional, solo para Safari
+        notifyButton: {
+          enable: true,  // Activa el botón de suscripción
+        },
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="container mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold mb-6 text-center">Employee Manager</h1>
+
+    <!-- Install Button -->
+    <div class="text-center mb-6">
+      <button id="install-btn" class="hidden bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white">
+        Install App
+      </button>
+      <button id="enable-push-btn" class="bg-green-500 text-white px-4 py-2 rounded">
+        Enable Push Notifications
+      </button>
+    </div>
+
+    <!-- Form -->
+    <form id="employee-form" class="bg-gray-800 p-6 rounded-md shadow-md">
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium">Name</label>
+        <input type="text" id="name" class="w-full mt-2 p-2 bg-gray-700 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="role" class="block text-sm font-medium">Role</label>
+        <input type="text" id="role" class="w-full mt-2 p-2 bg-gray-700 rounded" required>
+      </div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white w-full">Add Employee</button>
+    </form>
+
+    <!-- Table -->
+    <div class="overflow-x-auto mt-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold">Employee List</h2>
+        <button id="clear-btn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white">
+          Clear Records
+        </button>
+      </div>
+      <table class="w-full bg-gray-800 rounded shadow-md">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 text-left">Name</th>
+            <th class="py-2 px-4 text-left">Role</th>
+          </tr>
+        </thead>
+        <tbody id="employee-table">
+          <!-- Dynamic content -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

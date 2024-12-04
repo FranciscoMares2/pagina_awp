@@ -1,0 +1,121 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: white; /* Texto en blanco */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #444;
+    color: white;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .notification {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .notification.visible {
+    visibility: visible;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+  }
+  
+  td {
+    background-color: #222;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    h1, h2 {
+      font-size: 24px;
+    }
+  
+    input, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    table th, table td {
+      padding: 8px;
+    }
+  }
+  
